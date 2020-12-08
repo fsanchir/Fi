@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Breath - PRESS F11</title>
+        <style>
+            body {
+                transition-duration: 0.9s;
+            }
+            
+        </style>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        function toblack() {
+            document.body.style.backgroundColor = "black";
+            setTimeout(function() {towhite();}, 1000);
+        }
+        function towhite() {
+            document.body.style.backgroundColor = "white";
+	        setTimeout(function() {toblack();}, 1000);
+        }
+        toblack();
+
+    </script>
+</html>
