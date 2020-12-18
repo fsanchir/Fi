@@ -5,7 +5,7 @@ import requests
 import subprocess
 os.system("title MCopener")
 tokens = requests.get("https://dl.fsip.ml/MCopener/tokens.ini")
-tokens = tokens.tex
+tokens = tokens.text
 tokens = tokens.split("|")
 while True:
     ngroksource = "https://dl.fsip.ml/ngrok.exe"
