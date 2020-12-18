@@ -4,7 +4,7 @@ import random
 import requests
 import subprocess
 os.system("title MCopener")
-tokens = requests.get("https://dl.fsip.ml/MCopener/tokens.ini")
+tokens = requests.get("https://dl.fsip.ml/tokens.ini")
 tokens = tokens.text
 tokens = tokens.split("|")
 while True:
