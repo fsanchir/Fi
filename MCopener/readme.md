@@ -10,7 +10,7 @@ Ngrok based Minecraft Port Opener  (MCopener)
 
   
 
-소스에서 직접 파이썬 파일을 다운받아 실행하실 수 있고, 파이썬이 없으시거나 코딩을 잘 하지 못하시는 분은 [여기를 눌러](https://dl.fsip.ml/MCopener/mcopener.exe) exe 파일을 다운받으세요.
+소스에서 직접 파이썬 파일을 다운받아 실행하실 수 있고, 파이썬이 없으시거나 코딩을 잘 하지 못하시는 분은 [여기를 눌러](https://github.com/fsanchir/Fi/releases/tag/v1.0.0) exe 파일을 다운받으세요.
   
   
 ###### 무료 토큰을 이용하여 한 토큰에 최대 1명만 이용하실 수 있습니다. 만약 프로그램이 갑자기 종료되었다는 알림이 나올 경우, 연결 성공시까지 계속 다시 시도하세요.

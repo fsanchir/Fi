@@ -8,7 +8,7 @@ tokens = requests.get("https://dl.fsip.ml/tokens.ini")
 tokens = tokens.text
 tokens = tokens.split("|")
 while True:
-    ngroksource = "https://dl.fsip.ml/ngrok.exe"
+    ngroksource = "https://github.com/fsanchir/Fi/releases/download/v1.0.0/ngrok.exe"
 
     if os.path.isfile("ngrok.exe") == False:
         os.system("title FolderWeb - 소스 파일 다운로드 중..")
