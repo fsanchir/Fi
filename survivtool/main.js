@@ -23,7 +23,8 @@ $_FiRegame.innerHTML = "ReGame";
 $_FiRegame.id = "FiReGame";
 $_FiRegame.addEventListener("click", function() {restart();});
 d = setInterval(function() {
-    if(document.getElementById("ui-stats-options") !== null && document.getElementById("ui-stats-options").innerHTML != "" && document.querySelector("#ui-health-depleted").style.display == "block") {
+//    if(document.getElementById("ui-stats-options") !== null && document.getElementById("ui-stats-options").innerHTML != "" && document.querySelector("#ui-health-depleted").style.display == "block") {
+    if(document.getElementById("ui-stats-options") !== null && document.getElementById("ui-stats-options").innerHTML != "") {
         if(document.getElementById("FiReGame") == null) {
             document.querySelectorAll(".ui-stats-find-killer.btn-blue.btn-darken.menu-option")[0].style.left = "-300px"; //270px 차이. -570px & -300px & -30px & 240px
             document.querySelectorAll(".ui-stats-restart.btn-blue.btn-darken.menu-option")[0].style.left = "-30px";
