@@ -155,6 +155,7 @@ killloginterval = setInterval(function() {
         }
     }
 }, 200);
+document.querySelector("title").innerHTML = "surviv.io - 2d battle royale game | Fi's Tools";
 /*
 document.querySelectorAll(".ui-weapon-name")[0].innerHTML 1번 무기
 document.querySelectorAll(".ui-armor-level")[0].innerHTML 헬멧 레밸
