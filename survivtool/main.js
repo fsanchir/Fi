@@ -129,17 +129,29 @@ var first = true;
 });
 
 killloginterval = setInterval(function() {
-    if(document.querySelector("#ui-killfeed-0>.killfeed-text") !== null && document.querySelector("#ui-killfeed-0>.killfeed-text").innerHTML !== null) {
-        if(document.querySelector("#ui-killfeed-0>.killfeed-text").style.color != "yellow") {
-            var killlogtext;
-            killlogtext = document.querySelector("#ui-killfeed-0>.killfeed-text").innerHTML;
-            killlogtext = killlogtext.replace(/\s/g, '');
-            killlogtext = killlogtext.split("with")[0]
-            killlogtext = killlogtext.split("killed")
-            if(killlogtext[0]==killlogtext[1]) {
-                document.querySelector("#ui-killfeed-0>.killfeed-text").style.color = "yellow";
+    var step;
+    for(step = 0; step < 6; step++) {
+        if(document.querySelector("#ui-killfeed-"+step+">.killfeed-text") !== null && document.querySelector("#ui-killfeed-"+step+">.killfeed-text").innerHTML !== null) {
+            if(document.querySelector("#ui-killfeed-"+step+">.killfeed-text").style.color != "yellow") {
+                var killlogtext;
+                killlogtext = document.querySelector("#ui-killfeed-"+step+">.killfeed-text").innerHTML;
+                killlogtext = killlogtext.replace(/\s/g, '');
+                killlogtext = killlogtext.split("with")[0]
+                killlogtext = killlogtext.split("killed")
+                if(killlogtext[0]==killlogtext[1]) {
+                    document.querySelector("#ui-killfeed-"+step+">.killfeed-text").style.color = "yellow";
+                }
             }
-        }
+            else {
+                var killlogtext;
+                killlogtext = document.querySelector("#ui-killfeed-"+step+">.killfeed-text").innerHTML;
+                killlogtext = killlogtext.replace(/\s/g, '');
+                killlogtext = killlogtext.split("with")[0]
+                killlogtext = killlogtext.split("killed")
+                if(killlogtext[0]!=killlogtext[1]) {
+                    document.querySelector("#ui-killfeed-"+step+">.killfeed-text").style.color = "rgb(239, 238, 238)";
+                }
+            }
     }
 }, 200);
 /*
