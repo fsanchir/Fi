@@ -152,6 +152,7 @@ killloginterval = setInterval(function() {
                     document.querySelector("#ui-killfeed-"+step+">.killfeed-text").style.color = "rgb(239, 238, 238)";
                 }
             }
+        }
     }
 }, 200);
 /*
