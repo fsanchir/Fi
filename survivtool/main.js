@@ -15,20 +15,44 @@ function gamestarted() {
     var $temp_started = document.querySelector("#ui-health-depleted").style.display == "block";
     return $temp_started
 }
-var $F_HP, $F_ADREN, $ELEMENT_HP, $FRegion, $regionele, $_FiRegame;
+function reportkiller() {
+    if(document.querySelector(".ui-stats-player-spectate.ui-stats-player-spectate-red.game-battle-result-btn-darkened") != null) {
+        return "Battle Finished or Killer is dead!"
+    }
+    document.querySelector(".ui-stats-player-spectate.ui-stats-player-spectate-red").click()
+    document.querySelector("#btn-report-option").click()
+    document.querySelector("#btn-confirm-report").click()
+    document.querySelector("#btn-spectate-view-stats").click()
+    return "Reported!";
+}
+function msg(msg) {
+    document.querySelector("#FiReport").innerHTML = "msg";
+}
+var $F_HP, $F_ADREN, $ELEMENT_HP, $FRegion, $regionele, $_FiRegame, $_FiReport;
 $_FiRegame = document.createElement("a");
 $_FiRegame.className = "ui-stats-restart btn-blue btn-darken menu-option"
 $_FiRegame.style.left = "240px";
 $_FiRegame.innerHTML = "ReGame";
 $_FiRegame.id = "FiReGame";
 $_FiRegame.addEventListener("click", function() {restart();});
+
+$_FiReport = document.createElement("a");
+$_FiReport.className = "ui-stats-find-killer btn-blue btn-darken menu-option"
+$_FiReport.style.left = "-30px";
+$_FiReport.innerHTML = "Report Killer";
+$_FiReport.id = "FiReport";
+$_FiReport.addEventListener("click", function() {msg(reportkiller());});
+
+
+
 d = setInterval(function() {
 //    if(document.getElementById("ui-stats-options") !== null && document.getElementById("ui-stats-options").innerHTML != "" && document.querySelector("#ui-health-depleted").style.display == "block") {
     if(document.getElementById("ui-stats-options") !== null && document.getElementById("ui-stats-options").innerHTML != "") {
-        if(document.getElementById("FiReGame") == null) {
-            document.querySelectorAll(".ui-stats-find-killer.btn-blue.btn-darken.menu-option")[0].style.left = "-300px"; //270px 차이. -570px & -300px & -30px & 240px
-            document.querySelectorAll(".ui-stats-restart.btn-blue.btn-darken.menu-option")[0].style.left = "-30px";
+        if(document.getElementById("FiReGame") == null && document.getElementById("FiReport") == null) {
+            document.querySelectorAll(".ui-stats-find-killer.btn-blue.btn-darken.menu-option")[0].style.left = "-570px"; //270px 차이. -570px & -300px & -30px & 240px
+            document.querySelectorAll(".ui-stats-restart.btn-blue.btn-darken.menu-option")[0].style.left = "-300px";
             document.getElementById("ui-stats-options").appendChild($_FiRegame);
+            document.getElementById("ui-stats-options").appendChild($_FiReport);
         }
     }
 }, 1500)
