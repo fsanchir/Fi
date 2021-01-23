@@ -26,7 +26,7 @@ function reportkiller() {
     return "Reported!";
 }
 function msg(msg) {
-    document.querySelector("#FiReport").innerHTML = "msg";
+    document.querySelector("#FiReport").innerHTML = msg;
 }
 var $F_HP, $F_ADREN, $ELEMENT_HP, $FRegion, $regionele, $_FiRegame, $_FiReport;
 $_FiRegame = document.createElement("a");
